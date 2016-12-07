@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  font-size: 1.5em;
+  padding-bottom: 40px;
+}
+
+.App-intro {
+  font-size: large;
+  max-width: 500px;
+  margin: auto;
+}
+
+.App-container {
+  width: 80%;
+  box-shadow: 0 0px 4px rgba(0,0,0,0.8) inset;
+  margin: 30px auto;
+  height: 300px;
+  position: relative;
+}
+
+.MotionMenu.btmRight {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  margin: 0;
+}
+.MotionMenu.btmRight .MotionMenu_MainBtn{
+  background: #73261F;
+}
+.MotionMenu.btmRight .MotionMenu_smallBtn{
+  background: #BF382C;
+}
+
+.MotionMenu.centered {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  margin: 0;
+}
+.MotionMenu.centered .MotionMenu_MainBtn{
+  background: #D99152;
+}
+.MotionMenu.centered .MotionMenu_smallBtn{
+  background: #D9C382;
+}
+
+.MotionMenu.centered.blue .MotionMenu_MainBtn{
+  background: #54C2F3;
+}
+.MotionMenu.centered.blue .MotionMenu_smallBtn{
+  background: #7BD9F9;
+}
+
+.MotionMenu.centered.purple {
+  left: 20px;
+  bottom: 50%;
+}
+.MotionMenu.centered.purple .MotionMenu_MainBtn{
+  background: #552D70;
+}
+.MotionMenu.centered.purple .MotionMenu_smallBtn{
+  background: #B7A6C1;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
