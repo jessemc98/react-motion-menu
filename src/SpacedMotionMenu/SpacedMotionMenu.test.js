@@ -2,8 +2,8 @@ import React from 'react'
 import expect from 'expect'
 import { shallow } from 'enzyme'
 
-import SpacedMotionMenu from './SpacedMenu'
-import MotionMenu from '../MotionMenu/MotionMenu'
+import SpacedMotionMenu from './'
+import MotionMenu from '../MotionMenu/'
 
 describe("SpacedMotionMenu", function () {
   it("renders a MotionMenu with the given props except for props.angle", function () {
@@ -23,7 +23,7 @@ describe("SpacedMotionMenu", function () {
     expect(motion.prop('btns')).toEqual(props.btns)
   });
   it("renders MotionMenu with props.angle === 360/props.btns.length", function () {
-    const btns = [{id: 1},{id: 2},{id: 3},{id: 4}]
+    const btns = [{iconSrc: '1'},{iconSrc: '2'},{iconSrc: '3'},{iconSrc: '4'}]
     const wrapper = shallow(<SpacedMotionMenu btns={btns} />)
     const motion = wrapper.find(MotionMenu)
 

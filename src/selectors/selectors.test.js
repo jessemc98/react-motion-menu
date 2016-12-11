@@ -1,5 +1,5 @@
 import expect from 'expect'
-import * as selectors from './selectors'
+import * as selectors from './'
 
 describe("degreesToRadian", function () {
   const { degreesToRadian } = selectors
@@ -22,7 +22,7 @@ describe("eqOfACircle", function () {
 
     expect(eqOfACircle(angle, circle.radius, circle.pos)).toEqual(expectedIntersect)
   });
-  it(`when input angle is negative, returns the point where a line going from center
+  it(`works when input angle is negative, returns the point where a line going from center
     of circle at given angle meets the perimeter rounded to 6 decimal points`, function () {
     const circle = {radius: 50, pos: {x: 0, y: 0}}
     const angle = -45 //specified in degrees

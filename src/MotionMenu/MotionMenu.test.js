@@ -16,7 +16,7 @@ function menuWithBtns(numOfBtns){
   return shallow(<MotionMenu btns={btns} />)
 }
 describe("MotionMenu", function () {
-  describe("render", function () {
+  describe("renders", function () {
     it("with a className equal to props.className", function () {
       const wrapper = shallow(<MotionMenu className="testClassName"/>)
 
@@ -67,22 +67,22 @@ describe("MotionMenu", function () {
         expect(mainBtn.prop('isOpen')).toBeFalsy()
       });
     });
-    describe("StaggeredButtons", function () {
-      it("rendered with props.getStaggeredStyles equal to this.getStaggeredStyles", function () {
+    describe("renders StaggeredButtons", function () {
+      it("with props.getStaggeredStyles equal to this.getStaggeredStyles", function () {
         const wrapper = shallow(<MotionMenu />)
         const staggered = wrapper.find(StaggeredButtons)
         const { getStaggeredStyles } = wrapper.instance()
 
         expect(staggered.prop('getStaggeredStyles')).toEqual(getStaggeredStyles)
       });
-      it("rendered with props.btns equal to this.btns", function () {
+      it("with props.btns equal to this.btns", function () {
         const btns = [{},{},{}]
         const wrapper = shallow(<MotionMenu btns={btns}/>)
         const staggered = wrapper.find(StaggeredButtons)
 
         expect(staggered.prop('btns')).toEqual(btns)
       });
-      describe("renders with correct props.defaultStyle", function () {
+      describe("with correct props.defaultStyle", function () {
         it("based on given props", function () {
           const props = {mainBtnRadius: 150, btnRadius: 25}
           const wrapper = shallow(<MotionMenu {...props} />)
@@ -111,7 +111,7 @@ describe("MotionMenu", function () {
           }
           expect(staggered.prop('defaultStyle')).toEqual(expected)
         });
-        it("renders with correct btnOffsets for given props", function () {
+        it("with correct btnOffsets for given props", function () {
           const btns = [{},{},{},{}]
           const wrapper = shallow(
             <MotionMenu
@@ -133,7 +133,7 @@ describe("MotionMenu", function () {
           expect(staggered.prop('btnOffsets')).toEqual(expected)
         });
       });
-      describe("renders with correct btnOffsets for given props", function () {
+      describe("with correct btnOffsets", function () {
         it("based on given props", function () {
           const btns = [{},{},{},{}]
           const wrapper = shallow(
@@ -184,7 +184,6 @@ describe("MotionMenu", function () {
     // -90 is north 0 is east
     const wrapper = shallow(<MotionMenu />)
     const getBaseAngle = wrapper.instance().getBaseAngle
-
     it("returns correct starting angle based on input", function () {
       const inputs = [
         {btns: [{}],angle: 90,angleOffset: 0},
@@ -256,9 +255,11 @@ describe("MotionMenu", function () {
     });
     it(`calls getBtnOffset(index) for each array index in props.btns
         and sets instance.btnOffsets to an array of those values`, function () {
+      //mock getBtnOffset
       const returnIndex = i => i
       const spy = expect.spyOn(instance, 'getBtnOffset')
         .andCall(returnIndex)
+
       const props = {
         btns: [{},{},{}],
         angle: 90,
