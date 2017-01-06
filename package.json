@@ -1,6 +1,6 @@
 {
   "name": "@jessemc98/motion-menu",
-  "version": "0.1.5",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "devDependencies": {
     "babel-core": "^6.21.0",
