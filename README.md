@@ -1,3 +1,14 @@
+# Installation
+Requires `react` as a peer dependency,
+only dependency is `react-motion` which I am contemplating if it is worth adding as a peer dependency also
+
+`npm i @jessemc98/motion-menu`
+
+# Demos
+To see working demos navigate to the 'demo' folder and run the following command, which, downloads all dependencies and runs a development server with multiple demos, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm i && npm start`
+
 # API Reference
 
 ### &lt;MotionMenu />
@@ -80,15 +91,3 @@ MotionMenu uses `react-motion` behind the scenes, the springConfig prop uses the
 The `SpacedMotionMenu` component takes the same props as the `MotionMenu` component, the main difference is, that the `SpacedMotionMenu` does not take an `angle` prop. Instead it calculates an angle where, with the given props.btns, every button would be evenly spaced around the main button.
 
 E.g given `btns={[{},{},{},{}]}` it would render a `MotionMenu` component with the `angle` prop set to 90 in order to evenly space the 4 buttons
-
----
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of the full guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
-# Demos
-The following command downloads all dependencies and runs a development server with a few working demos, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `npm i && npm start`
