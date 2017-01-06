@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import MotionMenu from './MotionMenu'
-import SpacedMotionMenu from './SpacedMotionMenu'
+import MotionMenu from '@jessemc98/motion-menu'
+import { SpacedMotionMenu } from '@jessemc98/motion-menu'
 
 const btn = {iconSrc: logo}
 class App extends Component {
