@@ -1,7 +1,8 @@
 {
   "name": "@jessemc98/motion-menu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
+  "module": "lib/es6.js",
   "devDependencies": {
     "babel-core": "6.21.0",
     "babel-loader": "6.2.10",
@@ -11,12 +12,14 @@
     "enzyme": "2.6.0",
     "expect": "1.20.2",
     "node-sass": "4.1.1",
+    "npm-run-parallel": "0.5.0",
     "react-addons-test-utils": "15.4.1",
     "react-dom": "15.4.1",
     "react-scripts": "0.7.0",
     "sass-loader": "4.1.1",
     "style-loader": "0.13.1",
-    "webpack": "1.14.0"
+    "webpack": "1.14.0",
+    "webpack-merge": "2.3.1"
   },
   "peerDependencies": {
     "react": "15.4.1"
@@ -26,8 +29,9 @@
   },
   "scripts": {
     "start": "npm run test",
-    "build": "rm -rf lib && webpack",
-    "prepublish": "npm run build",
+    "build:es": "webpack --config webpack.config.es.js",
+    "build": "webpack --config webpack.config.umd.js",
+    "prepublish": "rm -rf lib npm && npm-run-parallel build build:es",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
