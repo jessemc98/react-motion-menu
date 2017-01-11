@@ -1,13 +1,15 @@
 # Installation
 Requires `react` as a peer dependency,
-only dependency is `react-motion` which I am contemplating if it is worth adding as a peer dependency also
+only dependency is `react-motion`, if you think this should also be a peer dependency please open an issue on github.
 
 `npm i @jessemc98/motion-menu`
 
 # Demos
-To see working demos navigate to the 'demo' folder and run the following command, which, downloads all dependencies and runs a development server with multiple demos, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To see working demos navigate to the 'demo' folder and run the following command.
 
 ### `npm i && npm start`
+
+which downloads all dependencies and runs a development server with multiple demos, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 # API Reference
 
@@ -31,7 +33,7 @@ The `Button` type is an object with the following structure:
 {
   iconSrc: String matching the src of the icon for the button,
   alt: String which is used as the alternative text for the button icon,
-  onClick: function which is called when the button is clicked
+  onClick: Function which is called when the button is clicked
 }
 ```
 
@@ -90,4 +92,17 @@ MotionMenu uses `react-motion` behind the scenes, the springConfig prop uses the
 
 The `SpacedMotionMenu` component takes the same props as the `MotionMenu` component, the main difference is, that the `SpacedMotionMenu` does not take an `angle` prop. Instead it calculates an angle where, with the given props.btns, every button would be evenly spaced around the main button.
 
-E.g given `btns={[{},{},{},{}]}` it would render a `MotionMenu` component with the `angle` prop set to 90 in order to evenly space the 4 buttons
+E.g given `btns={[{},{},{},{}]}` it would render a `MotionMenu` component with the `angle` prop set to 90 in order to evenly space the 4 buttons.
+
+# development
+After installation navigate to the installation directory and run the following command to run a test suite using facebooks jest.
+
+### `npm test`
+
+The following command builds a commonJs module at libs/index.js
+
+### `npm run build`
+
+The following command builds an es harmony module at libs/es6.js
+
+### `npm run build:es`
