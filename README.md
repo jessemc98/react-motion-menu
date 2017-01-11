@@ -11,6 +11,18 @@ To see working demos navigate to the 'demo' folder and run the following command
 
 which downloads all dependencies and runs a development server with multiple demos, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+# Importing
+```
+// using es6 imports
+import MotionMenu from '@jessemc98/motion-menu'
+import { SpacedMotionMenu } from '@jessemc98/motion-menu'
+
+// using require syntax
+var motion = require('@jessemc98/motion-menu')
+var MotionMenu = motion.default
+var SpacedMotionMenu = motion.SpacedMotionMenu
+```
+
 # API Reference
 
 ### &lt;MotionMenu />
