@@ -1,3 +1,5 @@
+![motion-menu-examples](https://cloud.githubusercontent.com/assets/17962559/22513112/6ab64302-e89b-11e6-85a9-7202c855e696.jpg)
+
 # Installation
 Requires `react` as a peer dependency,
 only dependency is `react-motion`, if you think this should also be a peer dependency please open an issue on github.
